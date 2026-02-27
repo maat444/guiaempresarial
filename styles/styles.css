@@ -24,7 +24,7 @@ body {
 }
 
 .hero-section {
-    background: linear-gradient(135deg, rgba(62, 126, 230, 0.8), rgba(102, 16, 242, 0.8)), url('../images/background-image.jpeg');
+    background: linear-gradient(135deg, rgba(62, 126, 230, 0.8), rgba(102, 16, 242, 0.8)), url('../images/background-image.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
