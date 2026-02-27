@@ -1,0 +1,456 @@
+:root {
+    --primary-color: #3e7ee6;
+    --accent-color: #6610f2;
+    --dark-bg: #121212;
+    --key-color: #0d39fd;
+    --frame-section-color: rgba(153, 135, 231, 0.932);
+    --frame-section-color2: rgba(120, 95, 233, 0.32);
+    --frame-section-color3: rgba(16, 243, 84, 0.932);
+    --frame-section-color4: rgba(123, 190, 120, 0.32);
+    --frame-section-color5: rgba(12, 138, 143, 0.932);
+    --frame-section-color6: rgba(121, 176, 180, 0.32);
+    --frame-section-color7: rgba(126, 13, 101, 0.932);
+    --frame-section-color8: rgba(180, 105, 162, 0.32);
+    --frame-section-color9: rgba(235, 213, 88, 0.932);
+    --frame-section-color10: rgba(226, 231, 151, 0.32);
+    --frame-section-color11: rgba(41, 8, 228, 0.932);
+    --frame-section-color12: rgba(132, 217, 223, 0.932);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+    background-color: #f8f9fa;
+}
+
+.hero-section {
+    background: linear-gradient(135deg, rgba(62, 126, 230, 0.8), rgba(102, 16, 242, 0.8)), url('../images/background-image.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    padding: 100px 0;
+    -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+}
+
+.tip-title {
+    color: var(--frame-section-color5);
+    margin-bottom: 20px;
+}
+
+.step-card {
+    border: none;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    background: white;
+}
+
+.step-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.step-number {
+    width: 50px;
+    height: 50px;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.badge-tech {
+    background: rgba(13, 110, 253, 0.1);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    margin-right: 5px;
+    font-size: 0.8rem;
+}
+
+footer {
+    background: var(--dark-bg);
+    color: white;
+    padding: 50px 0;
+}
+
+.timeline-line {
+    position: absolute;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background: #dee2e6;
+    z-index: -1;
+}
+
+/* Clase para la separación entre secciones */
+.section-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 4rem 0;
+    position: relative;
+    width: 100%;
+}
+
+.divider-line {
+    flex-grow: 1;
+    height: 2px;
+    background: var(--primary-color);
+    box-shadow: 0 0 10px rgba(62, 126, 230, 0.3);
+}
+
+.divider-icon {
+    margin: 0 20px;
+    width: 50px;
+    height: 50px;
+    background: white;
+    border: 2px solid var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    animation: dividerPulse 2s infinite ease-in-out;
+    z-index: 2;
+}
+
+@keyframes dividerPulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(62, 126, 230, 0.4);
+    }
+
+    70% {
+        transform: scale(1.1);
+        box-shadow: 0 0 0 15px rgba(62, 126, 230, 0);
+    }
+
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(62, 126, 230, 0);
+    }
+}
+
+/* Estilos para las secciones con "llaves" */
+.frame-section {
+    position: relative;
+    color: var(--key-color);
+    padding: 2rem;
+    background: rgba(165, 207, 235, 0.32);
+}
+
+.frame-section::before,
+.frame-section::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2.5rem;
+    /* ancho de la llave vertical izquierda/dcha */
+    border-left: 6px solid var(--frame-section-color);
+    /* grosor y color de la 'llave' */
+    border-right: 6px solid var(--frame-section-color2);
+}
+
+.frame-section::before {
+    left: -1.5rem;
+    /* posición de la llave izquierda (ajusta a tu diseño) */
+    border-left: 6px solid var(--frame-section-color);
+}
+
+.frame-section::after {
+    right: -1.5rem;
+    /* posición de la llave derecha (ajusta a tu diseño) */
+    border-right: 6px solid var(--frame-section-color2);
+}
+
+/* Estilos para las frame-seccion1" */
+.frame-section1 {
+    position: relative;
+    color: var(--key-color);
+    padding: 2rem;
+    background: rgba(210, 243, 243, 0.32);
+}
+
+.frame-section1::before,
+.frame-section1::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2.5rem;
+    /* ancho de la llave vertical izquierda/dcha */
+    border-left: 6px solid var(--frame-section-color11);
+    /* grosor y color de la 'llave' */
+    border-right: 6px solid var(--frame-section-color12);
+}
+
+.frame-section1::before {
+    left: -1.5rem;
+    /* posición de la llave izquierda (ajusta a tu diseño) */
+    border-left: 6px solid var(--frame-section-color11);
+}
+
+.frame-section1::after {
+    right: -1.5rem;
+    /* posición de la llave derecha (ajusta a tu diseño) */
+    border-right: 6px solid var(--frame-section-color12);
+}
+
+/* Estilos para las secciones con "llaves" 2 */
+.frame-section2 {
+    position: relative;
+    color: var(--key-color);
+    padding: 2rem;
+    background: rgba(145, 238, 136, 0.363);
+}
+
+.frame-section2::before,
+.frame-section2::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2.5rem;
+    /* ancho de la llave vertical izquierda/dcha */
+    border-left: 6px solid var(--frame-section-color3);
+    /* grosor y color de la 'llave' */
+    border-right: 6px solid var(--frame-section-color4);
+}
+
+.frame-section2::before {
+    left: -1.5rem;
+    /* posición de la llave izquierda (ajusta a tu diseño) */
+    border-left: 6px solid var(--frame-section-color3);
+}
+
+.frame-section2::after {
+    right: -1.5rem;
+    /* posición de la llave derecha (ajusta a tu diseño) */
+    border-right: 6px solid var(--frame-section-color4);
+}
+
+/* Estilos para las secciones con "llaves" 3 */
+.frame-section3 {
+    position: relative;
+    color: var(--key-color);
+    padding: 2rem;
+    background: rgba(233, 184, 243, 0.363);
+}
+
+.frame-section3::before,
+.frame-section3::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2.5rem;
+    /* ancho de la llave vertical izquierda/dcha */
+    border-left: 6px solid var(--frame-section-color5);
+    /* grosor y color de la 'llave' */
+    border-right: 6px solid var(--frame-section-color6);
+}
+
+.frame-section3::before {
+    left: -1.5rem;
+    /* posición de la llave izquierda (ajusta a tu diseño) */
+    border-left: 6px solid var(--frame-section-color5);
+}
+
+.frame-section3::after {
+    right: -1.5rem;
+    /* posición de la llave derecha (ajusta a tu diseño) */
+    border-right: 6px solid var(--frame-section-color6);
+}
+
+/* Estilos para las secciones con "llaves" 4 */
+.frame-section4 {
+    position: relative;
+    color: var(--key-color);
+    padding: 2rem;
+    background: rgba(195, 184, 243, 0.363);
+}
+
+.frame-section4::before,
+.frame-section4::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2.5rem;
+    /* ancho de la llave vertical izquierda/dcha */
+    border-left: 6px solid var(--frame-section-color7);
+    /* grosor y color de la 'llave' */
+    border-right: 6px solid var(--frame-section-color8);
+}
+
+.frame-section4::before {
+    left: -1.5rem;
+    /* posición de la llave izquierda (ajusta a tu diseño) */
+    border-left: 6px solid var(--frame-section-color7);
+}
+
+.frame-section4::after {
+    right: -1.5rem;
+    /* posición de la llave derecha (ajusta a tu diseño) */
+    border-right: 6px solid var(--frame-section-color8);
+}
+
+/* Estilos para las secciones con "llaves" 5 */
+.frame-section5 {
+    position: relative;
+    color: var(--key-color);
+    padding: 2rem;
+    background: rgba(229, 231, 110, 0.363);
+}
+
+.frame-section5::before,
+.frame-section5::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2.5rem;
+    /* ancho de la llave vertical izquierda/dcha */
+    border-left: 6px solid var(--frame-section-color9);
+    /* grosor y color de la 'llave' */
+    border-right: 6px solid var(--frame-section-color10);
+}
+
+.frame-section5::before {
+    left: -1.5rem;
+    /* posición de la llave izquierda (ajusta a tu diseño) */
+    border-left: 6px solid var(--frame-section-color9);
+}
+
+.frame-section5::after {
+    right: -1.5rem;
+    /* posición de la llave derecha (ajusta a tu diseño) */
+    border-right: 6px solid var(--frame-section-color10);
+}
+
+/* --- Media Queries para Responsive --- */
+
+/* Tablets y Dispositivos Medianos (< 768px) */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 60px 0;
+        -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+        mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+    }
+
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .frame-section,
+    .frame-section1,
+    .frame-section2,
+    .frame-section3,
+    .frame-section4,
+    .frame-section5 {
+        padding: 1.5rem;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .frame-section::before,
+    .frame-section::after,
+    .frame-section1::before,
+    .frame-section1::after,
+    .frame-section2::before,
+    .frame-section2::after,
+    .frame-section3::before,
+    .frame-section3::after,
+    .frame-section4::before,
+    .frame-section4::after,
+    .frame-section5::before,
+    .frame-section5::after {
+        width: 1.5rem;
+    }
+
+    .frame-section::before,
+    .frame-section1::before,
+    .frame-section2::before,
+    .frame-section3::before,
+    .frame-section4::before,
+    .frame-section5::before {
+        left: -1rem;
+    }
+
+    .frame-section::after,
+    .frame-section1::after,
+    .frame-section2::after,
+    .frame-section3::after,
+    .frame-section4::after,
+    .frame-section5::after {
+        right: -1rem;
+    }
+}
+
+/* Celulares de Pantalla Pequeña (< 480px) */
+@media (max-width: 480px) {
+    .hero-section {
+        padding: 40px 15px;
+    }
+
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+
+    .hero-section .lead {
+        font-size: 1rem;
+    }
+
+    .frame-section,
+    .frame-section1,
+    .frame-section2,
+    .frame-section3,
+    .frame-section4,
+    .frame-section5 {
+        padding: 1.25rem;
+        border-left: 4px solid var(--frame-section-color);
+        /* Fallback visual */
+        border-right: 4px solid var(--frame-section-color2);
+    }
+
+    /* Ocultamos las llaves pseudo-elementos en pantallas muy pequeñas para evitar overflow horizontal */
+    .frame-section::before,
+    .frame-section::after,
+    .frame-section1::before,
+    .frame-section1::after,
+    .frame-section2::before,
+    .frame-section2::after,
+    .frame-section3::before,
+    .frame-section3::after,
+    .frame-section4::before,
+    .frame-section4::after,
+    .frame-section5::before,
+    .frame-section5::after {
+        display: none;
+    }
+
+    .step-card {
+        padding: 1.5rem !important;
+    }
+
+    .step-number {
+        width: 40px;
+        height: 40px;
+        font-size: 0.9rem;
+    }
+
+    h2,
+    h3,
+    h4 {
+        font-size: 1.5rem !important;
+    }
+}
